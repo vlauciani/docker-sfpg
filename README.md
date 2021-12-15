@@ -1,11 +1,11 @@
-[![License](https://img.shields.io/github/license/INGV/fdsnws-fetcher.svg)](https://github.com/INGV/fdsnws-fetcher/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/INGV/fdsnws-fetcher.svg)](https://github.com/INGV/fdsnws-fetcher/issues)
+[![License](https://img.shields.io/github/license/vlauciani/docker-sfpg.svg)](https://github.com/vlauciani/docker-sfpg/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/vlauciani/docker-sfpg.svg)](https://github.com/vlauciani/docker-sfpg/issues)
 
-[![Docker build](https://img.shields.io/badge/docker%20build-from%20CI-yellow)](https://hub.docker.com/r/ingv/fdsnws-fetcher)
-![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/ingv/fdsnws-fetcher?sort=semver)
-![Docker Pulls](https://img.shields.io/docker/pulls/ingv/fdsnws-fetcher)
+[![Docker build](https://img.shields.io/badge/docker%20build-from%20CI-yellow)](https://hub.docker.com/r/vlauciani/docker-sfpg)
+![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/vlauciani/docker-sfpg?sort=semver)
+![Docker Pulls](https://img.shields.io/docker/pulls/vlauciani/docker-sfpg)
 
-# docker-sfpg [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/INGV/fdsnws-fetcher/master/publiccode.yml)](https://github.com/INGV/fdsnws-fetcher/blob/master/publiccode.yml) [![CircleCI](https://circleci.com/gh/INGV/fdsnws-fetcher/tree/master.svg?style=svg)](https://circleci.com/gh/INGV/fdsnws-fetcher/tree/master) | [![GitHub](https://img.shields.io/static/v1?label=GitHub&message=Link%20to%20repository&color=blueviolet)](https://github.com/INGV/fdsnws-fetcher)
+# docker-sfpg [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/vlauciani/docker-sfpg/main/publiccode.yml)](https://github.com/vlauciani/docker-sfpg/blob/main/publiccode.yml) [![CircleCI](https://circleci.com/gh/vlauciani/docker-sfpg/tree/main.svg?style=svg)](https://circleci.com/gh/vlauciani/docker-sfpg/tree/main) | [![GitHub](https://img.shields.io/static/v1?label=GitHub&message=Link%20to%20repository&color=blueviolet)](https://github.com/vlauciani/docker-sfpg)
 
 This Docker is based on "Single File PHP Gallery" by Kenny Svalgaard https://sye.dk/sfpg/ and generate a web gallery.
 
@@ -13,47 +13,47 @@ This Docker is based on "Single File PHP Gallery" by Kenny Svalgaard https://sye
 ### Clone the repository
 First, clone the git repositry:
 ```
-$ git clone https://github.com/INGV/fdsnws-fetcher.git
-$ cd fdsnws-fetcher
+$ git clone https://github.com/vlauciani/docker-sfpg.git
+$ cd docker-sfpg
 ```
 
 ### Docker image
-To obtain *fdsnws-fetcher* docker image, you have two options:
+To obtain *docker-sfpg* docker image, you have two options:
 
 #### 1) Get built image from DockerHub (*preferred*)
 Get the last built image from DockerHub repository:
 ```
-$ docker pull ingv/fdsnws-fetcher:latest
+$ docker pull vlauciani/docker-sfpg:latest
 ```
 
 #### 2) Build by yourself
 ```
-$ docker build --tag ingv/fdsnws-fetcher . 
+$ docker build --tag vlauciani/docker-sfpg . 
 ```
 
 in case of errors, try:
 ```
-$ docker build --no-cache --pull --tag ingv/fdsnws-fetcher . 
+$ docker build --no-cache --pull --tag vlauciani/docker-sfpg . 
 ```
 
 ### Run docker
 Running the command below to see the **help**:
 ```
-$ docker run -it --user $(id -u):$(id -g) --rm -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT ingv/fdsnws-fetcher -h
+$ docker run -it --user $(id -u):$(id -g) --rm -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT vlauciani/docker-sfpg -h
 
  This docker search the given STATIONXML_PARAMETERS on StationXML and convert it to RESP or DATALESS files or DATASELECT_LIST list.
 
   Print software version number:
-  $ docker run -it --rm ingv/fdsnws-fetcher -v
+  $ docker run -it --rm vlauciani/docker-sfpg -v
 
   Usage:
-  $ docker run -it --rm --user $(id -u):$(id -g) -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT ingv/fdsnws-fetcher -u <stationxml params>
+  $ docker run -it --rm --user $(id -u):$(id -g) -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT vlauciani/docker-sfpg -u <stationxml params>
 
     Values for option -t: resp, paz, dless, dataselect_list, miniseed, sac
 
     Examples:
-     1) $ docker run -it --rm ingv/fdsnws-fetcher -v
-     2) $ docker run -it --rm --user $(id -u):$(id -g) -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT ingv/fdsnws-fetcher -u "network=IV&station=ACER&starttime=2017-11-02T00:00:00&endtime=2017-11-02T01:00:00" -t "dataselect_list"
+     1) $ docker run -it --rm ingv/docker-sfpg -v
+     2) $ docker run -it --rm --user $(id -u):$(id -g) -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT ingv/docker-sfpg -u "network=IV&station=ACER&starttime=2017-11-02T00:00:00&endtime=2017-11-02T01:00:00" -t "dataselect_list"
      3) $ docker run -it --rm --user $(id -u):$(id -g) -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT ingv/fdsnws-fetcher -u "network=IV&latitude=42&longitude=12&maxradius=1" -t "dataselect_list"
      4) $ docker run -it --rm --user $(id -u):$(id -g) -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT ingv/fdsnws-fetcher -u "network=IV&latitude=47.12&longitude=11.38&maxradius=0.5&channel=HH?,EH?,HN?" -t "dataselect_list"
      5) $ docker run -it --rm --user $(id -u):$(id -g) -v $(pwd)/stationxml.conf:/opt/stationxml.conf -v $(pwd)/OUTPUT:/opt/OUTPUT ingv/fdsnws-fetcher -u "network=IV,MN&station=BLY&starttime=2017-11-02T00:00:00&endtime=2017-11-02T01:00:00" -t "dless"
