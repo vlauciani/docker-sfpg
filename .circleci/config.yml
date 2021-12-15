@@ -64,11 +64,6 @@ workflows:
               only: /^v.*/
 #            branches:
 #              ignore: /.*/
-          filters:
-            tags:
-              only: /^v.*/
-#            branches:
-#              ignore: /.*/
       - publish-tag-and-latest:
           context:
             - valentino
