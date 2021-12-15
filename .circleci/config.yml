@@ -56,7 +56,6 @@ jobs:
             ./docker-pushrm --file /tmp/workspace/README.md $IMAGE_NAME
 
 workflows:
-  version: 2.1
   myWorkflow:
     jobs:
       - build:
