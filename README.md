@@ -10,6 +10,9 @@
 This Docker is based on "Single File PHP Gallery" by Kenny Svalgaard:
 - https://sye.dk/sfpg/ 
 
+and It was inspired by Tobiaqs project:
+- https://github.com/Tobiaqs/sfpg-docker
+
 ## Quickstart
 ### Clone the repository
 First, clone the git repositry:
