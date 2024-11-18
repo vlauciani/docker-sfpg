@@ -47,15 +47,15 @@ Running the command below to see the **help**:
 $ docker run -p 8080:80 -v /home/myPictures:/var/www/html/images vlauciani/docker-sfpg
 ```
 
+### Test
+Check installation with test url:
+- http://<your_ip>:8080/sfpg_test.php
+
 ## Update Docker image from DockerHub
 Get last Docker image from DockerHub repository:
 ```
 $ docker pull vlauciani/docker-sfpg
 ```
-
-### Test
-Check test url:
-- http://<your_ip>:8080/sfpg_test.php
 
 # Contribute
 Thanks to your contributions!
