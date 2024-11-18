@@ -49,6 +49,10 @@ Get last Docker image from DockerHub repository:
 $ docker pull vlauciani/docker-sfpg
 ```
 
+### Test
+Check test url:
+- http://<your_ip>:8080/sfpg_test.php
+
 # Contribute
 Thanks to your contributions!
 
