@@ -1,11 +1,15 @@
-[![License](https://img.shields.io/github/license/vlauciani/docker-sfpg.svg)](https://github.com/vlauciani/docker-sfpg/blob/main/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/vlauciani/docker-sfpg.svg)](https://github.com/vlauciani/docker-sfpg/issues)
+[![License](https://img.shields.io/github/license/vlauciani/docker-sfpg?label=License)](https://github.com/vlauciani/docker-sfpg/blob/main/LICENSE)
 
-[![Docker build](https://img.shields.io/badge/docker%20build-from%20CI-yellow)](https://hub.docker.com/r/vlauciani/docker-sfpg)
-![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/vlauciani/docker-sfpg?sort=semver)
-![Docker Pulls](https://img.shields.io/docker/pulls/vlauciani/docker-sfpg)
+[![DockerHub](https://img.shields.io/badge/DockerHub-link_to_repository-blueviolet?style=flat&logo=docker&logoColor=blue&logoSize=auto)](https://hub.docker.com/r/vlauciani/docker-sfpg)
+![DockerHub Image Size](https://img.shields.io/docker/image-size/vlauciani/docker-sfpg?sort=semver&style=flat&logo=docker&logoSize=auto&label=DockerHub%20Image%20Size)
+![DockerHub Pulls](https://img.shields.io/docker/pulls/vlauciani/docker-sfpg?style=flat&logo=docker&logoSize=auto&label=DockerHub%20Image%20Pull)
 
-# docker-sfpg [![Version](https://img.shields.io/badge/dynamic/yaml?label=ver&query=softwareVersion&url=https://raw.githubusercontent.com/vlauciani/docker-sfpg/main/publiccode.yml)](https://github.com/vlauciani/docker-sfpg/blob/main/publiccode.yml) [![CircleCI](https://circleci.com/gh/vlauciani/docker-sfpg/tree/main.svg?style=svg)](https://circleci.com/gh/vlauciani/docker-sfpg/tree/main) | [![GitHub](https://img.shields.io/static/v1?label=GitHub&message=Link%20to%20repository&color=blueviolet)](https://github.com/vlauciani/docker-sfpg)
+![GitHub Static Badge](https://img.shields.io/badge/GitHub-link_to_repository-blueviolet?style=flat&logo=github&logoSize=auto)
+[![GitHub Issues](https://img.shields.io/github/issues/vlauciani/docker-sfpg?label=GitHub%20Issues&logo=github)](https://github.com/vlauciani/docker-sfpg/issues)
+
+![Dynamic YAML Badge](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2FINGV%2Fpyml%2Fmain%2F.github%2Fworkflows%2Fdocker-image.yml&query=%24..platforms&style=flat&logo=amazonec2&logoColor=white&logoSize=auto&label=Supported%20Arch)
+
+# docker-sfpg  [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/vlauciani/docker-sfpg/docker-image.yml?branch=main&style=flat&logo=GitHub-Actions&logoColor=white&logoSize=auto&label=GitHub%20Actions)](https://github.com/vlauciani/docker-sfpg/actions)
 
 This Docker is based on "Single File PHP Gallery" by Kenny Svalgaard:
 - https://sye.dk/sfpg/ 
@@ -56,7 +60,7 @@ Check test url:
 # Contribute
 Thanks to your contributions!
 
-Here is a list of users who already contributed to this repository:
+Here is a list of users who already contributed to this repository: \
 <a href="https://github.com/vlauciani/docker-sfpg/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=vlauciani/docker-sfpg" />
 </a>
@@ -65,5 +69,5 @@ Here is a list of users who already contributed to this repository:
 - Tobiaqs: https://github.com/Tobiaqs/sfpg-docker
  
 # Author
-(c) 2021 Valentino Lauciani vlauciani[at]gmail.com
+(c) 2024 Valentino Lauciani vlauciani[at]gmail.com
 
