@@ -4,7 +4,7 @@
 ![DockerHub Image Size](https://img.shields.io/docker/image-size/vlauciani/docker-sfpg?sort=semver&style=flat&logo=docker&logoSize=auto&label=DockerHub%20Image%20Size)
 ![DockerHub Pulls](https://img.shields.io/docker/pulls/vlauciani/docker-sfpg?style=flat&logo=docker&logoSize=auto&label=DockerHub%20Image%20Pull)
 
-![GitHub Static Badge](https://img.shields.io/badge/GitHub-link_to_repository-blueviolet?style=flat&logo=github&logoSize=auto)
+[![GitHub Static Badge](https://img.shields.io/badge/GitHub-link_to_repository-blueviolet?style=flat&logo=github&logoSize=auto)](https://github.com/vlauciani/docker-sfpg)
 [![GitHub Issues](https://img.shields.io/github/issues/vlauciani/docker-sfpg?label=GitHub%20Issues&logo=github)](https://github.com/vlauciani/docker-sfpg/issues)
 
 ![Dynamic YAML Badge](https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2FINGV%2Fpyml%2Fmain%2F.github%2Fworkflows%2Fdocker-image.yml&query=%24..platforms&style=flat&logo=amazonec2&logoColor=white&logoSize=auto&label=Supported%20Arch)
