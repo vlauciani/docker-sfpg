@@ -2,7 +2,7 @@ FROM php:8.2.0-apache-buster
 
 ENV VERSION_SFPG=4.12.0
 ENV VERSION_SFPG_TEST=1.5.3
-ENV CFLAGS="-O1"
+#ENV CFLAGS="-O1"
 
 RUN echo "[PHP]\nmemory_limit = 256M" > /usr/local/etc/php/php.ini
 
@@ -26,10 +26,10 @@ RUN unzip Single_File_PHP_Gallery_${VERSION_SFPG}.zip \
     && unzip sfpg_test_${VERSION_SFPG_TEST}.zip \
     && rm sfpg_test_${VERSION_SFPG_TEST}.zip \
     && mkdir _sfpg_data \
-    && chown www-data:www-data _sfpg_data \ 
-    && docker-php-ext-configure gd --with-jpeg \
-    && docker-php-ext-install gd \
-    && docker-php-ext-install exif
+    && chown www-data:www-data _sfpg_data 
+RUN docker-php-ext-configure gd --with-jpeg 
+RUN docker-php-ext-install gd 
+RUN docker-php-ext-install exif
 
 # Add personal configurations
 RUN mv index.php sfpg.php \
