@@ -2,6 +2,7 @@ FROM php:8.2.0-apache-buster
 
 ENV VERSION_SFPG=4.12.0
 ENV VERSION_SFPG_TEST=1.5.3
+ENV CFLAGS="-O1"
 
 RUN echo "[PHP]\nmemory_limit = 256M" > /usr/local/etc/php/php.ini
 
