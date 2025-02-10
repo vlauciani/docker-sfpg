@@ -36,6 +36,7 @@ RUN mv index.php sfpg.php \
     && echo "define('GALLERY_ROOT', './images/');" >> index.php \
     && echo "define('SORT_DIVIDER', '---');" >> index.php \
     && echo "define('IMAGE_EXCLUDE_REGEX', '/.*\.i\.png/i');" >> index.php \
+    && echo "define('DATA_ROOT', './_sfpg_data/');" >> index.php \
     && echo "include '/var/www/html/sfpg.php';" >> index.php \
     && echo "?>" >> index.php
 
