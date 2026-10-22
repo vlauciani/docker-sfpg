@@ -1,5 +1,4 @@
-#FROM php:8.2.0-apache-buster
-FROM php:8.2.0-apache-bullseye
+FROM php:8.3-apache-trixie
 
 ENV VERSION_SFPG=4.12.0
 ENV VERSION_SFPG_TEST=1.5.3
